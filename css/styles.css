@@ -79,10 +79,16 @@ h6 {
 }
 
 /* стилизация шрифта навигации по шрифту */
-
+.auth-nav.list .item {
+  display: flex;
+  align-items: center;
+}
+.auth-nav a {
+  color: var(--primary-text-color);
+}
 .side-nav a,
 .auth-nav a {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -103,7 +109,6 @@ h6 {
 .side-nav a:hover,
 .side-nav a:focus,
 .side-nav:active,
-.auth-nav a:hover,
 .auth-nav a:focus,
 .auth-nav:active,
 .contacts a:hover,
@@ -115,9 +120,21 @@ h6 {
 .side-nav .current {
   color: var(--accent-color);
 }
-.auth-nav a {
-  color: var(--primary-text-color);
+.enve:hover {
+  color: var(--accent-color);
 }
+.envelope {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.envelope:hover {
+  fill: currentColor;
+}
+
+.enve {
+  align-items: center;
+}
+
 /* стилизация body*/
 /* стилизация основного шрифта и цвета текста */
 body {
@@ -134,10 +151,19 @@ body {
   /* outline: 1px solid violet; */
   text-align: center;
   padding: 200px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/Img.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.hero-section.footer {
+.hero-footer {
   text-align: left;
   padding: 60px 0;
+  background-color: var(--second-back-color);
 }
 
 /* стилизация заголовка h1 */
@@ -205,6 +231,22 @@ body {
 .edge > li > p {
   margin: 0;
 }
+.container-min {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  border: transparent;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.iconedge {
+  display: flex;
+  width: 70px;
+  height: 70px;
+}
 /* стилизация деятельности */
 .job .list {
   display: flex;
@@ -255,6 +297,33 @@ body {
   width: 270px;
   background-color: #fff;
 }
+.container-team {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.communic {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+}
+.communic:hover,
+.communic:active,
+.communic:focus {
+  background-color: var(--accent-color);
+  fill: var(--second-text-color);
+}
+.container-team .communic + .communic {
+  margin-left: 10px;
+}
+
+.container-team a svg {
+  margin: 0;
+}
 .teammate h3 {
   font-weight: 500;
   font-size: 16px;
@@ -271,6 +340,43 @@ body {
   line-height: 1.19;
   text-align: center;
   margin: 0;
+  margin-bottom: 16px;
+}
+/* разметка секции с Клиентами */
+.wrapul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client .client-item {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.client-item:hover {
+  border-color: var(--accent-color);
+}
+.client-edit {
+  display: flex;
+  fill: #afb1b8;
+}
+.client-item:hover .client-edit {
+  fill: var(--accent-color);
+}
+.wrapul .client-item + .client-item {
+  margin-left: 30px;
 }
 /* стилизация footer */
 .address,
@@ -288,7 +394,7 @@ body {
   background-color: var(--second-back-color);
 }
 .container .logo.footer {
-  display: block;
+  display: flex;
   margin-bottom: 20px;
 }
 .address p {
@@ -307,6 +413,19 @@ body {
   text-decoration: none;
 }
 
+/* стилизация Приглашений по соц.сетям */
+.container-foot {
+  width: 1200px;
+  padding: 0 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit {
+  color: var(--second-text-color);
+  text-transform: uppercase;
+}
 /* стилизация Портфолио */
 .visually-hidden {
   position: absolute;
