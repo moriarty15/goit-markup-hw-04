@@ -120,14 +120,18 @@ h6 {
 .side-nav .current {
   color: var(--accent-color);
 }
-.enve:hover {
+.enve:hover,
+.enve:active,
+.enve:focus {
   color: var(--accent-color);
 }
 .envelope {
   margin-right: 10px;
   fill: currentColor;
 }
-.envelope:hover {
+.envelope:hover,
+.envelope:focus,
+.envelope:active {
   fill: currentColor;
 }
 
@@ -352,10 +356,12 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.wrapul li {
+  list-style: none;
+}
 .client .client-item {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -365,20 +371,33 @@ body {
   padding: 0;
   margin: 0;
 }
-.client-item:hover {
+.client-item:hover,
+.client-item:active,
+.client-item:focus {
   border-color: var(--accent-color);
 }
 .client-edit {
   display: flex;
   fill: #afb1b8;
 }
-.client-item:hover .client-edit {
+.client-item:hover .client-edit,
+.client-item:active .client-edit,
+.client-item:focus .client-edit {
   fill: var(--accent-color);
 }
-.wrapul .client-item + .client-item {
+.wrapul .wrapli + .wrapli {
   margin-left: 30px;
 }
 /* стилизация footer */
+.footer-address {
+  display: inline-block;
+  width: 231px;
+  margin: 0;
+  margin-right: 70px;
+}
+.container-team.foot {
+  padding: 0;
+}
 .address,
 .contacts {
   font-size: 14px;
@@ -415,16 +434,29 @@ body {
 
 /* стилизация Приглашений по соц.сетям */
 .container-foot {
-  width: 1200px;
-  padding: 0 15px;
-
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+  width: 231px;
+}
+.karman {
+  display: flex;
 }
 
 .edit {
   color: var(--second-text-color);
   text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.twitter .foot {
+}
+.communic.foot {
+  fill: var(--second-text-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+.communic.foot:hover,
+.communic.foot:active,
+.communic.foot:focus {
+  background-color: var(--accent-color);
 }
 /* стилизация Портфолио */
 .visually-hidden {
