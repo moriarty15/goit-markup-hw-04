@@ -151,8 +151,6 @@ body {
 }
 /* стилизация фона hero и footer */
 .hero-section {
-  background-color: var(--second-back-color);
-  /* outline: 1px solid violet; */
   text-align: center;
   padding: 200px 0;
   background-image: linear-gradient(
@@ -161,6 +159,7 @@ body {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/Img.svg");
+  background-size: 1600px 600px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -294,26 +293,28 @@ body {
 .container .teammate {
   margin: 0;
 }
-.container .teammate li {
+.container .teammate .item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   width: 270px;
   background-color: #fff;
 }
+.teamka {
+  display: flex;
+  padding: 0;
+}
 .container-team {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 .communic {
   display: flex;
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
+  width: 44px;
+  height: 44px;
 }
 .communic:hover,
 .communic:active,
@@ -321,11 +322,12 @@ body {
   background-color: var(--accent-color);
   fill: var(--second-text-color);
 }
-.container-team .communic + .communic {
+.teamka .container-team + .container-team,
+.teamka-footer .container-team + .container-team {
   margin-left: 10px;
 }
 
-.container-team a svg {
+.container-team li a svg {
   margin: 0;
 }
 .teammate h3 {
@@ -336,7 +338,7 @@ body {
   margin-bottom: 10px;
 }
 .teammate .range {
-  padding: 30px 0;
+  padding: 30px 32px;
 }
 /* стилизация должностей участников команды */
 .teammate p {
@@ -370,19 +372,16 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
+  fill: #afb1b8;
 }
 .client-item:hover,
 .client-item:active,
 .client-item:focus {
   border-color: var(--accent-color);
 }
-.client-edit {
-  display: flex;
-  fill: #afb1b8;
-}
-.client-item:hover .client-edit,
-.client-item:active .client-edit,
-.client-item:focus .client-edit {
+.wrapli:hover .client-item,
+.wrapli:active .client-item,
+.wrapli:focus .client-item {
   fill: var(--accent-color);
 }
 .wrapul .wrapli + .wrapli {
@@ -394,8 +393,10 @@ body {
   width: 231px;
   margin: 0;
   margin-right: 70px;
+  align-self: baseline;
 }
-.container-team.foot {
+.teamka-footer {
+  display: flex;
   padding: 0;
 }
 .address,
@@ -436,8 +437,9 @@ body {
 .container-foot {
   display: inline-block;
   width: 231px;
+  align-self: baseline;
 }
-.karman {
+.container.footerr {
   display: flex;
 }
 
@@ -445,7 +447,6 @@ body {
   color: var(--second-text-color);
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-top: 10px;
 }
 .twitter .foot {
 }
