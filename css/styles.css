@@ -398,6 +398,7 @@ body {
 .teamka-footer {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 .address,
 .contacts {
@@ -436,7 +437,6 @@ body {
 /* стилизация Приглашений по соц.сетям */
 .container-foot {
   display: inline-block;
-  width: 231px;
   align-self: baseline;
 }
 .container.footerr {
